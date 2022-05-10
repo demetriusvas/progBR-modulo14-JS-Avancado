@@ -1,3 +1,4 @@
+/*
 function novoAluno(nome, idade){
     return {nome, idade}
 }
@@ -15,3 +16,8 @@ function alunoDaquiA5anos(aluno){
 }
 
 console.log(alunos.map(alunoDaquiA5anos));
+*/
+
+let alunoA = { nome: "Demetrius", idade: 34};
+let alunoB = { ...alunoA }
+alunoB.idade = 25;
