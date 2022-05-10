@@ -35,7 +35,7 @@ function inserirUsuario(nome){
     let promise = new Promise(function(resolve, reject){
         setTimeout(() => {
             usuarios.push(nome);
-            let error = true;
+            let error = false;
             if(!error){
                 resolve();
             }else{
@@ -49,9 +49,16 @@ function inserirUsuario(nome){
 function listarUsuarios(){
     console.log(usuarios);
 }
-
+/*
 inserirUsuario("Demetrius")
     .then(listarUsuarios)
     .catch((error) => {
         console.log(error.msg)
     });
+*/
+async function executar(){
+    await inserirUsuario("Demetrius");
+    listarUsuarios();
+}
+
+executar();
